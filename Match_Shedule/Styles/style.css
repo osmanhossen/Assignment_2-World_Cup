@@ -1,6 +1,7 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 body {
+  margin: 10px 0;
   font-family: "Poppins", sans-serif;
 }
 main {
@@ -44,6 +45,7 @@ main {
 }
 .banner_img img {
   width: 580px;
+  height: 100%;
 }
 /*----- banner area style End----- */
 
@@ -56,7 +58,6 @@ main {
   height: 312px;
   flex-direction: column;
   padding: 30px;
-  border: 2px solid;
   margin-right: 24px;
 }
 .side_menu a {
@@ -118,7 +119,11 @@ main {
   text-align: center;
   align-items: center;
 }
-
+.footer_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .footer_area a {
   color: #b9b9b9;
   text-decoration: none;
@@ -139,11 +144,65 @@ main {
 
 /*------------------- Mobile Devices----------------------- */
 
-/* @media screen {
-  
-} */
+@media only screen and (max-width: 688px) {
+  .container,
+  .footer_container {
+    width: 100%;
+  }
+  .banner_area {
+    flex-direction: column;
+  }
+  .title_area {
+    width: 100%;
+  }
+  .banner_img img {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .match_shedule_area {
+    flex-direction: column;
+    align-items: center;
+  }
+  .side_menu {
+    flex-direction: column;
+    background: none;
+  }
+  .match_shedule {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer_nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_nav {
+    margin-top: 30px;
+  }
+}
 
 /* -----------------------------Tablet Devices--------------------- */
-/* @media screen {
-  
-} */
+@media only screen and (min-width: 688px) and(max-width:992px) {
+  .container {
+    width: 100%;
+  }
+  .banner_area {
+    display: flex;
+  }
+  .match_shedule_area {
+    flex-direction: column;
+    align-items: center;
+  }
+  .side_menu {
+    flex-direction: row;
+    align-items: center;
+    background: none;
+  }
+  .match_shedule {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
